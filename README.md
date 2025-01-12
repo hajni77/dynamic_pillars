@@ -45,6 +45,9 @@ make
 e.g. 
 ./trt_infer ../../../dataset/demo_data/val/000134.bin ../../../pretrained/model.trt
 ```
+
+#### 2.3 BackBone - with dynamic convolution
+
 ![Alt text](https://github.com/hajni77/dynamic_pillars/blob/main/backbone.png)
 
 

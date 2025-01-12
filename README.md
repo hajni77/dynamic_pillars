@@ -1,32 +1,3 @@
-## 0. Introduction
-
-#### 0.1 Supported features
-- [X] PyTorch2ONNX (Support dynamic axes)
-- [X] ONNX2TRT (Support dynamic axes)
-- [X] TRT Inference (Support dynamic axes)
-- [X] Complete TRT/C++ detection pipline (including voxelizaion and post-processing)
-- [X] Voxelization acceleration with CUDA
-- [ ] Code unification with the main branch
-
-#### 0.1 Performance
-
-
-Similar detection results between PyTorch, ONNX and TRT inference are achieved. Detection results validated on val/000134.bin are summarized in `infer_results`. My experimental environment is as follows, (however, TensorRT >= 8 and the corresponding CUDA are recommend for supporting `ScatterND`)
-- `GPU`: RTX 3080
-- `CUDA`: 11.1
-- `TensorRT`: 7.2.3.4
-
-    |  | Voxelization (ms) | Inference (ms) | PostProcessing (ms) | Total (ms) |
-    | :---: | :---: | :---: | :---: | :---: |
-    | PyTorch | 5.78 (CUDA) | 17.15 | 4.45 |  27.39 |
-    | ONNX | 5.66 (CUDA)| 15.82 | 2.64 | 24.13 |
-    | TensorRT | 226.63 (C++) | 20.6 | 0 | 248.87 |
-    | TensorRT(FP16) | 241.27 (C++) | 14.02 | 0 | 256.91 |
-    | TensorRT | 5.07 (CUDA) | 18.15 | 0 | 24.56 |
-    | TensorRT(FP16) | 5.11 (CUDA) | **12.15** | 0 | **18.51** |
-    
-
-
 
 ## 1. PyTorch2ONNX
 

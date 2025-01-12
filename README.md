@@ -10,7 +10,6 @@
 
 #### 0.1 Performance
 
-![](./figures/pytorch_trt.png)
 
 Similar detection results between PyTorch, ONNX and TRT inference are achieved. Detection results validated on val/000134.bin are summarized in `infer_results`. My experimental environment is as follows, (however, TensorRT >= 8 and the corresponding CUDA are recommend for supporting `ScatterND`)
 - `GPU`: RTX 3080
